@@ -1,19 +1,13 @@
 
+o
+java:S11929"MUse already-defined constant 'PARAM_1' instead of duplicating its value here.(éÛ«ªÿÿÿÿÿ8õö©‚Å1
+o
+java:S11928"MUse already-defined constant 'PARAM_3' instead of duplicating its value here.(¦ßÛÿÿÿÿÿ8öö©‚Å1
 i
-java:S11921"GDefine a constant instead of duplicating this literal "radius" 3 times.(«ïèìÿÿÿÿÿ8ç¦ˆÉÄ1
-R
-java:S1141"5Extract this nested try block into a separate method.(µ—ºæ8ç¦ˆÉÄ1
-d
-java:S2095]"GUse try-with-resources or close this "Statement" in a "finally" clause.(÷†§‚8ó¦ˆÉÄ1
-d
-java:S2095V"GUse try-with-resources or close this "Statement" in a "finally" clause.(ó£þÌ8ó¦ˆÉÄ1
-i
-java:S2095E"GUse try-with-resources or close this "Statement" in a "finally" clause.(±ˆ…äúÿÿÿÿ8ó¦ˆÉÄ1
->
-java:S38642"!Remove this use of "Stream.peek".(–ýìæ8ø¦ˆÉÄ1
-G	java:S1062"+Replace this use of System.out by a logger.(–ýìæ8ù¦ˆÉÄ1
-X	java:S1259"<This block of commented-out lines of code should be removed.(žÅè­8ø©ŽÉÄ1
-L	java:S106C"+Replace this use of System.out by a logger.(†Ä¬¯þÿÿÿÿ8û¦ˆÉÄ1
-L	java:S106T"+Replace this use of System.out by a logger.(Ê›Õ•ùÿÿÿÿ8ü¦ˆÉÄ1
-L	java:S106c"+Replace this use of System.out by a logger.(‡èþŸúÿÿÿÿ8ý¦ˆÉÄ1
-L	java:S106o"+Replace this use of System.out by a logger.(Æ­ÿÿÿÿÿÿ8ý¦ˆÉÄ1
+java:S11927"MUse already-defined constant 'PARAM_2' instead of duplicating its value here.(¥Ü½Q8öö©‚Å1
+L	java:S106"+Replace this use of System.out by a logger.(ÎÑúóýÿÿÿÿ8ûö©‚Å1
+L	java:S106)"+Replace this use of System.out by a logger.(Ê›Õ•ùÿÿÿÿ8ûö©‚Å1
+j
+java:S1858,"M"sqlSamples" is already a string, there's no need to call "toString()" on it.(ðµ¨›8Ô¥æ‚Å1
+L	java:S1066"+Replace this use of System.out by a logger.(‡èþŸúÿÿÿÿ8üö©‚Å1
+L	java:S106="+Replace this use of System.out by a logger.(Æ­ÿÿÿÿÿÿ8üö©‚Å1
