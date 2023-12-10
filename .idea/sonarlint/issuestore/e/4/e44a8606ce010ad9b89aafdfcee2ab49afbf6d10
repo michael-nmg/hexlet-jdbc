@@ -1,13 +1,23 @@
 
 o
-java:S11929"MUse already-defined constant 'PARAM_1' instead of duplicating its value here.(éÛ«ªÿÿÿÿÿ8õö©‚Å1
+java:S1192"MUse already-defined constant 'PARAM_3' instead of duplicating its value here.(†ûÙ·şÿÿÿÿ8èş­«Å1
 o
-java:S11928"MUse already-defined constant 'PARAM_3' instead of duplicating its value here.(¦ßÛÿÿÿÿÿ8öö©‚Å1
-i
-java:S11927"MUse already-defined constant 'PARAM_2' instead of duplicating its value here.(¥Ü½Q8öö©‚Å1
-L	java:S106"+Replace this use of System.out by a logger.(ÎÑúóıÿÿÿÿ8ûö©‚Å1
-L	java:S106)"+Replace this use of System.out by a logger.(Ê›Õ•ùÿÿÿÿ8ûö©‚Å1
-j
-java:S1858,"M"sqlSamples" is already a string, there's no need to call "toString()" on it.(ğµ¨›8Ô¥æ‚Å1
-L	java:S1066"+Replace this use of System.out by a logger.(‡èşŸúÿÿÿÿ8üö©‚Å1
-L	java:S106="+Replace this use of System.out by a logger.(Æ­ÿÿÿÿÿÿ8üö©‚Å1
+java:S1192"MUse already-defined constant 'PARAM_1' instead of duplicating its value here.(†ûÙ·şÿÿÿÿ8éş­«Å1
+o
+java:S1192"MUse already-defined constant 'PARAM_2' instead of duplicating its value here.(†ûÙ·şÿÿÿÿ8éş­«Å1
+M
+java:S1481"+Remove this unused "titles" local variable.(Æ—µ«ùÿÿÿÿ8õş­«Å1
+]	java:S125"<This block of commented-out lines of code should be removed.(•¦›­şÿÿÿÿ8õş­«Å1
+]	java:S125"<This block of commented-out lines of code should be removed.(éîƒ„ùÿÿÿÿ8õş­«Å1
+L	java:S106#"+Replace this use of System.out by a logger.(ÎÑúóıÿÿÿÿ8öş­«Å1
+G	java:S106+"+Replace this use of System.out by a logger.(Å—ï¶8öş­«Å1
+L	java:S106="+Replace this use of System.out by a logger.(‡èşŸúÿÿÿÿ8÷ş­«Å1
+L	java:S106K"+Replace this use of System.out by a logger.(ëæİÒûÿÿÿÿ8øş­«Å1
+L	java:S106R"+Replace this use of System.out by a logger.(‡èşŸúÿÿÿÿ8Ò×Ù«Å1
+L	java:S106Y"+Replace this use of System.out by a logger.(Æ­ÿÿÿÿÿÿ8®Ü«Å1
+H
+java:S1068"+Remove this unused "PARAM_1" private field.(¥Ã¸Ú8øş­«Å1
+H
+java:S1068"+Remove this unused "PARAM_2" private field.(ùìùİ8ùş­«Å1
+H
+java:S1068"+Remove this unused "PARAM_3" private field.(™á÷ô8ùş­«Å1

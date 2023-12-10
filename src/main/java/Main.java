@@ -10,6 +10,7 @@ import java.nio.file.Paths;
 import java.sql.DriverManager;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class Main {
 
@@ -21,13 +22,16 @@ public class Main {
     private static final String PARAM_3 = "solarSystemName";
 
     public static void main(String[] args) throws SQLException {
+        var paramList = List.of("radius", "region", "security", "solarSystemName");
         var titles = FileUtils.getTitles(FILE_PATH);
-        var celestials = FileUtils.getCelestialsOfRegion(FILE_PATH, titles, REGION);
-        var samples = FileUtils.getSamples(celestials, PARAM_1, PARAM_2, PARAM_3);
+//        var celestials1 = FileUtils.getCelestialsOfRegion(FILE_PATH, titles, REGION);
+        var celestials = FileUtils.getCelestialsOfRegion(FILE_PATH, REGION);
+//        var samples1 = FileUtils.getSamples(celestials1, PARAM_1, PARAM_2, PARAM_3);
+        var samples = FileUtils.getSamples(celestials);
 
         try (var connection = DriverManager.getConnection("jdbc:h2:mem:hexlet_test")) {
 
-            var sqlCreated = SqlUtils.sqlCreateTable(titles);
+            var sqlCreated = SqlUtils.sqlCreateTable(paramList);
             System.out.println(sqlCreated);
 
             try (var statement = connection.createStatement()) {
@@ -35,21 +39,45 @@ public class Main {
             }
 
             ///////////////////////////////////////////////////////
+            var sqlInsert = SqlUtils.sqlInsert(paramList);
+            System.out.println(sqlInsert);
 
-            var values = SqlUtils.insertingValues(samples, titles);
-            var sqlSamples = SqlUtils.sqlInsert(titles, values);
-            System.out.println(sqlSamples);
-
-            try (var statementInsert = connection.createStatement()) {
-                statementInsert.executeUpdate(sqlSamples.toString());
+            try (var preparedStatement = connection.prepareStatement(sqlInsert)) {
+                for (var celestial : samples) {
+                    preparedStatement.setString(1, celestial.getRadius());
+                    preparedStatement.setString(2, celestial.getRegionID());
+                    preparedStatement.setString(3, celestial.getSecurity());
+                    preparedStatement.setString(4, celestial.getSolarSystemName());
+                    preparedStatement.executeUpdate();
+                }
             }
 
             ///////////////////////////////////////////////////////
-
-            var sql3 = "SELECT * FROM celestials";
+            var sqlSelection = "SELECT * FROM celestials ORDER BY radius DESC LIMIT 5";
 
             try (var statementSelect = connection.createStatement()) {
-                var resultSet = statementSelect.executeQuery(sql3);
+                var resultSet = statementSelect.executeQuery(sqlSelection);
+                while (resultSet.next()) {
+                    System.out.format("%s - %s - %s%n",
+                            resultSet.getString("radius"),
+                            resultSet.getString("solarSystemName"),
+                            resultSet.getString("security"));
+                }
+            }
+            ///////////////////////////////////////////////////////
+            var sqlDelete = "DELETE FROM celestials WHERE radius LIKE '1%'";
+
+            try (var preparedStatement = connection.prepareStatement(sqlDelete)) {
+                preparedStatement.executeUpdate();
+            }
+
+            ///////////////////////////////////////////////////////
+            System.out.println("===============================================");
+            ///////////////////////////////////////////////////////
+            var sqlSelection2 = "SELECT * FROM celestials ORDER BY radius DESC";
+
+            try (var statementSelect = connection.createStatement()) {
+                var resultSet = statementSelect.executeQuery(sqlSelection2);
                 while (resultSet.next()) {
                     System.out.format("%s - %s - %s%n",
                             resultSet.getString("radius"),
