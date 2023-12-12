@@ -1,4 +1,5 @@
 public class CelestialBuilder {
+    private Long id = 0L;
     private String regionID = "";
     private String constellationID = "";
     private String solarSystemID = "";
@@ -27,11 +28,16 @@ public class CelestialBuilder {
     private String securityClass = "";
 
     public Celestial build() {
-        return new Celestial(regionID, constellationID, solarSystemID,
+        return new Celestial(id, regionID, constellationID, solarSystemID,
                 solarSystemName, x, y, z, xMin, xMax, yMin, yMax, zMin, zMax,
                 luminosity, border, fringe, corridor, hub, international,
                 regional, constellation, security, factionID, radius,
                 sunTypeID, securityClass);
+    }
+
+    public CelestialBuilder setId(Long id) {
+        this.id = id;
+        return this;
     }
 
     public CelestialBuilder setRegionID(String regionID) {

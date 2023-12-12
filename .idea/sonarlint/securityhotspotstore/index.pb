@@ -11,3 +11,5 @@ L
 src/main/java/Celestial.java,f/8/f8706e16407fed05b7a8b2b7701affe7d9c80c0d
 S
 #src/main/java/CelestialBuilder.java,b/f/bfcebdadae7287904196bd4b060e8334c1edb98f
+O
+src/main/java/CelestialDAO.java,5/8/58952b1b305fadff5544ffaa3372e29fc1a68eba

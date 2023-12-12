@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 public class Celestial {
+    private Long id;
     private String regionID;
     private String constellationID;
     private String solarSystemID;
@@ -34,7 +35,8 @@ public class Celestial {
     private String sunTypeID;
     private String securityClass;
 
-    public Celestial(String regionID, String constellationID, String solarSystemID, String solarSystemName, String x, String y, String z, String xMin, String xMax, String yMin, String yMax, String zMin, String zMax, String luminosity, String border, String fringe, String corridor, String hub, String international, String regional, String constellation, String security, String factionID, String radius, String sunTypeID, String securityClass) {
+    public Celestial(Long id, String regionID, String constellationID, String solarSystemID, String solarSystemName, String x, String y, String z, String xMin, String xMax, String yMin, String yMax, String zMin, String zMax, String luminosity, String border, String fringe, String corridor, String hub, String international, String regional, String constellation, String security, String factionID, String radius, String sunTypeID, String securityClass) {
+        this.id = id;
         this.regionID = regionID;
         this.constellationID = constellationID;
         this.solarSystemID = solarSystemID;
@@ -271,8 +273,14 @@ public class Celestial {
         this.securityClass = securityClass;
     }
 
+    @Override
+    public  String toString() {
+        return String.format("%s - %s - %s - %s", id, radius, solarSystemName, security);
+    }
+
     public String getAllValues() {
-        return "'" + regionID + "'"
+        return "'" + id + "'"
+                + "," + "'" + regionID + "'"
                 + "," + "'" + constellationID + "'"
                 + "," + "'" + solarSystemID + "'"
                 + "," + "'" + solarSystemName + "'"
