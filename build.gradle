@@ -34,5 +34,9 @@ testlogger {
 }
 
 application {
-    mainClass = 'src.main.java.Main'
+    mainClass = 'Main'
+}
+
+run {
+    standardInput = System.in
 }
